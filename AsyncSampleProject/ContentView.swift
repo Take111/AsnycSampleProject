@@ -13,10 +13,11 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text(viewModel.title)
-                .padding()
-            Button("await asyncなボタン") {
-                viewModel.didTapButton()
+            Button("N個直列に実行するボタン") {
+                viewModel.didTapSyncButton()
+            }
+            Button("N個並列に実行するボタン") {
+                viewModel.didTapAsyncButton()
             }
         }
     }
